@@ -1,6 +1,7 @@
 #!usr/bin/python
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
+from flask import render_template
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/flaskmovie'
@@ -20,8 +21,11 @@ class User(db.Model):
 
 @app.route('/')
 def index():
-    return "<h1 style='color:red'> Hello Flask</h1>"
+    return render_template('add_user.html')
 
+@app.route('/post_user', methods=['POST'])
+def post_user():
+    return "<h1 style='color:red'>hello flask</h1>"
 
 if __name__ == '__main__':
     app.run()

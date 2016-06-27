@@ -4,7 +4,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask import render_template, redirect, request, url_for 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/flaskmovie'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://larrisa:postgres@localhost/flaskmovie'
 app.debug = True
 db = SQLAlchemy(app)
 

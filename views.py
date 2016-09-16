@@ -2,6 +2,7 @@
 
 from app import app, db
 from flask import render_template, redirect, request, url_for
+from models import User
 
 
 @app.route('/')
